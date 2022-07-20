@@ -9,10 +9,12 @@ _Numeric = Union[B.Number, B.JAXNumeric]
 
 
 @dispatch
-def take_along_axis(a: _Numeric, index: _Numeric, axis: int = 0) -> _Numeric:  # type: ignore
+def take_along_axis(a: Union[_Numeric, B.Numeric], index: _Numeric, axis: int = 0) -> _Numeric:  # type: ignore
     """
     Gathers elements of `a` along `axis` at `index` locations.
     """
+    if not isinstance(a, jnp.ndarray):
+        a = jnp.array(a)
     return jnp.take_along_axis(a, index, axis=axis)
 
 
@@ -38,3 +40,31 @@ def logspace(start: B.JAXNumeric, stop: _Numeric, num: int = 50):  # type: ignor
     Return numbers spaced evenly on a log scale.
     """
     return jnp.logspace(start, stop, num)
+
+
+@dispatch
+def degree(a: B.JAXNumeric):  # type: ignore
+    """
+    Given a vector a, return a diagonal matrix with a as main diagonal.
+    """
+    degrees = a.sum(axis=0)  # type: ignore
+    return jnp.diag(degrees)
+
+
+@dispatch
+def eigenpairs(L: B.JAXNumeric, k: int):
+    """
+    Obtain the k highest eigenpairs of a symmetric PSD matrix L.
+    """
+    l, u = jnp.linalg.eigh(L)
+    return l[:k], u[:, :k]
+
+
+@dispatch
+def set_value(a: B.JAXNumeric, index: int, value: float):
+    """
+    Set a[index] = value.
+    This operation is not done in place and a new array is returned.
+    """
+    a = a.at[index].set(value)
+    return a
