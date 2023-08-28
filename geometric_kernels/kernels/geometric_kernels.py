@@ -130,6 +130,7 @@ class MaternKarhunenLoeveKernel(BaseGeometricKernel):
             )
             print("normalizer", normalizer)
             print("spectral_values", spectral_values)
+            print("eigval", eigenvalues_laplacian)
             return spectral_values / normalizer
         return spectral_values
 
