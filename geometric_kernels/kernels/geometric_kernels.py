@@ -128,6 +128,8 @@ class MaternKarhunenLoeveKernel(BaseGeometricKernel):
                     )[:, None],
                 )
             )
+            print('normalizer', normalizer)
+            print('spectral_values', spectral_values)
             return spectral_values / normalizer
         return spectral_values
 

@@ -60,4 +60,6 @@ def test_normalize(kernel: MaternKarhunenLoeveKernel):
 
     K = kernel.K_diag(params, state, random_points)  # (N, )
 
+    print('K', K)
+
     np.testing.assert_allclose(np.mean(K), 1.0)
