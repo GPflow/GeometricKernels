@@ -23,19 +23,19 @@ source [env_name]/bin/activate
 
 2. Install the library in the active environment by running
 
-```bash
-pip install git+https://github.com/gpflow/geometrickernels.git
-```
+    ```bash
+    pip install git+https://github.com/gpflow/geometrickernels.git
+    ```
 
-<details>
-    <summary>You can also install the development version...</summary>
+    <details>
+        <summary>You may also want to install the development version.</summary>
 
-If you wish to use cutting edge features and are okay with things occasionally broken, you can install the library from the `devel` branch:
+    If you're interested in cutting-edge features and don't mind things occasionally broken, you can install the library from the `devel` branch:
 
-```bash
-pip install git+https://github.com/gpflow/geometrickernels.git@devel
-```
-</details>
+    ```bash
+    pip install git+https://github.com/gpflow/geometrickernels.git@devel
+    ```
+    </details>
 
 4. Install a backend of your choice
 
