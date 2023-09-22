@@ -27,6 +27,16 @@ source [env_name]/bin/activate
 pip install git+https://github.com/gpflow/geometrickernels.git
 ```
 
+<details>
+    <summary>You can also install the development version...</summary>
+
+If you wish to use cutting edge features and are okay with things occasionally broken, you can install the library from the `devel` branch:
+
+```bash
+pip install git+https://github.com/gpflow/geometrickernels.git@devel
+```
+</details>
+
 4. Install a backend of your choice
 
 We use [LAB](https://github.com/wesselb/lab) to support multiple backends (e.g., TensorFlow, Jax, PyTorch). However, you are not required to install all of them on your system to use the Geometric Kernel package. Simply install the backend (and (optionally) a GP package) of your choice. For example,
