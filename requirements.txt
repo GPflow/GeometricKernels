@@ -1,3 +1,4 @@
+scikit-learn==1.4.0
 gpytorch==1.11
 torch==2.1.2
 gpflow==2.9.0
