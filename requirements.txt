@@ -1,6 +1,6 @@
 gpytorch
 torch
-gpflow
+gpflow==1.11
 gpjax>=0.5.2
 tensorflow<2.14
 tensorflow-probability==0.20.1
