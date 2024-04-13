@@ -1,5 +1,4 @@
 # Base
--i 
 ipykernel
 backends>=1.5.4
 
