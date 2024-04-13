@@ -17,4 +17,4 @@ nbmake
 mypy
 
 # SphericalHarmonics from test pypy
--i https://test.pypi.org/simple SphericalHarmonics"
+-i https://test.pypi.org/simple SphericalHarmonics
