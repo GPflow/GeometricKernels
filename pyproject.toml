@@ -32,7 +32,6 @@ dependencies = [
     "opt-einsum",
     "geomstats",
     "einops",
-    "-i https://test.pypi.org/simple SphericalHarmonics",
 ]
 version="0.2a0"
 

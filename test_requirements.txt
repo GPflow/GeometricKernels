@@ -15,3 +15,6 @@ pytest
 # pytest-cov
 nbmake
 mypy
+
+# SphericalHarmonics from test pypy
+-i https://test.pypi.org/simple SphericalHarmonics"
