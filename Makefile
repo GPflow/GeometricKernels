@@ -19,6 +19,8 @@ install:  ## Install repo for developement (Only for Linux)
 	@echo "\n=== pip install package with dev requirements (using $(GK_REQUIREMENTS)) =============="
 	pip install --upgrade pip
 	pip install --upgrade --upgrade-strategy eager --no-cache-dir -r $(GK_REQUIREMENTS) | cat
+	# SphericalHarmonics from test pypy
+	pip install -i https://test.pypi.org/simple SphericalHarmonics
 	pip install -e .
 
 format:  ## Formats code with `autoflake`, `black` and `isort`

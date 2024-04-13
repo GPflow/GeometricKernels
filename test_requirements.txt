@@ -1,4 +1,5 @@
 # Base
+-i 
 ipykernel
 backends>=1.5.4
 
@@ -15,6 +16,3 @@ pytest
 # pytest-cov
 nbmake
 mypy
-
-# SphericalHarmonics from test pypy
--i https://test.pypi.org/simple SphericalHarmonics
