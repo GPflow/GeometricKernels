@@ -1,0 +1,8 @@
+:orphan:
+
+:py:mod:`geometric_kernels.resources`
+=====================================
+
+.. py:module:: geometric_kernels.resources
+
+

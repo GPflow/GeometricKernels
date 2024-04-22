@@ -1,0 +1,62 @@
+:orphan:
+
+:py:mod:`geometric_kernels._logging`
+====================================
+
+.. py:module:: geometric_kernels._logging
+
+.. autoapi-nested-parse::
+
+   Setup logging 
+
+
+
+Module Contents
+---------------
+
+.. py:class:: DisableLogging
+
+
+   Temporarily disable logging (except for the `CRITICAL` level messages).
+   Adapted from https://stackoverflow.com/a/20251235. Use as
+
+   .. code-block:: python
+
+       with DisableLogging():
+           do_your_stuff
+
+
+.. py:class:: FirstPartFilter(name='')
+
+
+   Bases: :py:obj:`logging.Filter`
+
+   A filter that provides the `name_first` variable for formatting. For a
+   logger called "aaa.bbb.ccc", name_first="aaa".
+   Adapted from https://stackoverflow.com/a/46961676.
+
+   .. py:method:: filter(record)
+
+      Determine if the specified record is to be logged.
+
+      Returns True if the record should be logged, or False otherwise.
+      If deemed appropriate, the record may be modified in-place.
+
+
+
+.. py:class:: NoUsingBackendFilter(name='')
+
+
+   Bases: :py:obj:`logging.Filter`
+
+   A filter that removes the "Using ... backend" log record of geomstats.
+
+   .. py:method:: filter(record)
+
+      Determine if the specified record is to be logged.
+
+      Returns True if the record should be logged, or False otherwise.
+      If deemed appropriate, the record may be modified in-place.
+
+
+
